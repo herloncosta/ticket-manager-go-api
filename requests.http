@@ -1,0 +1,32 @@
+GET http://localhost:8080/health
+Content-Type: application/json
+
+### -- Create a new ticket
+POST http://localhost:8080/tickets
+Content-Type: application/json
+
+{
+    "title": "Ticket 1",
+    "description": "Description 1",
+    "client_id": 1
+}
+
+### -- Get all tickets
+GET http://localhost:8080/tickets
+Content-Type: application/json
+
+### -- Get a ticket by id
+GET http://localhost:8080/tickets/3
+Content-Type: application/json
+
+### -- Update a ticket
+PUT http://localhost:8080/tickets/1
+Content-Type: application/json
+
+{
+    "title": "Primeiro ticket"
+}
+
+### -- Delete a ticket
+DELETE http://localhost:8080/tickets/5
+Content-Type: application/json
