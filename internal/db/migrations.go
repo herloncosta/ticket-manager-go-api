@@ -23,7 +23,7 @@ func RunMigrations(db *sql.DB) {
 	for _, query := range queries {
 		_, err := db.Exec(query)
 		if err != nil {
-			log.Fatal(`Error running migration: %v`, err)
+			log.Printf(`Error running migration: %v`, err)
 		}
 	}
 
